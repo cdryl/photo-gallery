@@ -47,6 +47,7 @@ export function HeroSection() {
 
   return (
     <section
+      id="start"
       ref={sectionRef}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
@@ -78,7 +79,6 @@ export function HeroSection() {
       <SiteHeader logoHref="#start" items={headerItems} className="py-8" />
 
       <div
-        id="start"
         className="relative z-10 mx-auto flex min-h-[calc(100vh-104px)] max-w-7xl items-center px-6 pb-20 pt-10 transition-transform duration-500 ease-out motion-reduce:transform-none md:px-10"
         style={{
           transform: "translate3d(var(--hero-content-x), var(--hero-content-y), 0)",

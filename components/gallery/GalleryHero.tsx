@@ -11,10 +11,6 @@ const galleryNavItems = [
     href: "/gallery",
     active: true,
   },
-  {
-    label: "Kontakt",
-    href: "/#kontakt",
-  },
 ];
 
 export function GalleryHero() {

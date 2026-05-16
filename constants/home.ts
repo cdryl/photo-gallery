@@ -63,5 +63,4 @@ export const navigationItems = [
   "Galeria",
   "Kategorie",
   "O fotografie",
-  "Kontakt",
 ];

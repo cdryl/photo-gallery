@@ -20,7 +20,7 @@ export function GalleryPhotoCard({ photo, onOpen, className = "" }: GalleryPhoto
       <button
         type="button"
         onClick={onOpen}
-        className="relative block w-full flex-1 overflow-hidden text-left focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#c7a66a]"
+        className="relative block w-full flex-1 cursor-pointer overflow-hidden text-left focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#c7a66a]"
         aria-label={`Otworz zdjecie: ${photo.title}`}
       >
         <PhotoVisual photo={photo} sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw" />

@@ -31,9 +31,10 @@ export function CategorySection({ categories, photos }: CategorySectionProps) {
             const backgroundPhoto = getRandomCategoryPhoto(category, photos);
 
             return (
-              <article
+              <a
                 key={category.slug}
-                className="group relative min-h-72 overflow-hidden border border-[#3a3327] bg-[#0b0d0b] p-7"
+                href={`/gallery?category=${category.slug}`}
+                className="group relative min-h-72 overflow-hidden border border-[#3a3327] bg-[#0b0d0b] p-7 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#c7a66a]"
               >
                 {backgroundPhoto?.imageSrc ? (
                   <Image
@@ -58,15 +59,12 @@ export function CategorySection({ categories, photos }: CategorySectionProps) {
                   <p className="mt-3 font-manrope text-sm leading-6 text-stone-300">
                     {category.description}
                   </p>
-                  <a
-                    href={`/gallery?category=${category.slug}`}
-                    className="mt-5 inline-flex items-center gap-3 font-manrope text-sm text-[#c7a66a] transition group-hover:translate-x-1"
-                  >
+                  <span className="mt-5 inline-flex items-center gap-3 font-manrope text-sm text-[#c7a66a] transition group-hover:translate-x-1">
                     Zobacz galerie
                     <ArrowRight aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </a>
             );
           })}
         </div>
